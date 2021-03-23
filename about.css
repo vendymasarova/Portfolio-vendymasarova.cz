@@ -115,10 +115,31 @@ h3 {
   height: auto;
 }
 
-/* .navigation .mobile {
-  display: none;
-  pointer-events: unset;
-} */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+.logo .v {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.logo .next {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: -15px;
+}
+
+.logo span {
+  margin-top: -10px;
+  font-size: 13px;
+  transform: translate(-5px, 3px);
+}
 
 /*------------ABOUT + WORK.HTML----------*/
 
@@ -509,14 +530,4 @@ h3 {
   .my-work .row .col .pc {
     width: 80%;
   }
-  /* .navigation .pc,
-  .preload .pc {
-    display: none;
-    pointer-events: unset;
-  }
-
-  .navigation .mobile,
-  .preload .mobile {
-    display: block;
-    /* pointer-events: ; */
 }
