@@ -24,13 +24,21 @@
         <div class="circle"></div>
         <div class="circle"></div>
       </div>
-      <img src="assets/logo.png" alt="logo" />
+      <img class="pc" src="assets/logo.png" alt="" />
+      <img class="mobile" src="assets/logo-mobile.png" alt="" />
     </div>
     <div class="main">
       <nav class="navigation">
-        <p><a href="about.html" class="nav-link">O mně</a></p>
-        <a href="index.html"><img src="assets/logo.png" alt="" /></a>
-        <p><a href="work.html" class="nav-link">Má práce</a></p>
+        <p><a href="about.html">O mně</a></p>
+        <p>
+          <a href="index.html" class="logo-link"
+            ><img class="pc" src="assets/logo.png" alt="" />
+            <img class="mobile" src="assets/logo-mobile.png" alt=""
+          /></a>
+        </p>
+        <button>
+          <a href="#my-work" class="text-button nav-link">Má práce</a>
+        </button>
       </nav>
 
       <main id="about-work" class="section">
@@ -160,18 +168,11 @@
           <div class="row">
             <div class="col">
               <a
-                href="https://vendymasarova.github.io/Spotify-Landing-Page/"
+                href="https://vendymasarova.github.io/Island-Web/"
                 target="_blank"
-                ><img
-                  class="pc"
-                  src="assets/Spotify landing page-pc.png"
-                  alt=""
+                ><img class="pc" src="assets/Island Web.png" alt=""
               /></a>
-              <img
-                class="mobile"
-                src="assets/Spotify landing page-mobile.png"
-                alt=""
-              />
+              <img class="mobile" src="assets/Island web-mobile.png" alt="" />
             </div>
             <div class="col">
               <a
@@ -189,5 +190,23 @@
         </div>
       </section>
     </div>
+
+    <script>
+      //Slidint into sections
+      // const nav = document.querySelector(".nav");
+      const btn = document.querySelector("button");
+      const scrolling = function (e) {
+        e.preventDefault();
+
+        //matching strategy--ignore events that are not click exactly on the nav__link
+        if (e.target.classList.contains("nav-link")) {
+          const id = e.target.getAttribute("href");
+          document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      // nav.addEventListener("click", scrolling);
+      btn.addEventListener("click", scrolling);
+    </script>
   </body>
 </html>

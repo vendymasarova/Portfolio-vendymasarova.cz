@@ -57,6 +57,11 @@ body {
   display: inline-block;
 }
 
+.preload .mobile {
+  display: none;
+  pointer-events: unset;
+}
+
 .circle:nth-child(2) {
   background-color: #a5a5a5;
   animation-delay: 0.5s;
@@ -173,6 +178,11 @@ body {
   color: #a0c5e8;
 }
 
+.navigation .mobile {
+  display: none;
+  pointer-events: unset;
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -203,6 +213,18 @@ body {
   } */
   .animate-text h1.text-in {
     font-size: 40px;
+    transform: translateY(-420%);
+  }
+
+  @keyframes textIn {
+    from {
+      transform: translateY(-410%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-420%);
+      opacity: 1;
+    }
   }
 
   .pages a {
@@ -213,10 +235,16 @@ body {
     width: 100%;
     padding: 0.5rem 1rem;
   }
-  .navigation img {
-    width: 50px;
+
+  .navigation .pc,
+  .preload .pc {
+    display: none;
+    pointer-events: unset;
   }
-  .preload img {
-    width: 50px;
+
+  .navigation .mobile,
+  .preload .mobile {
+    display: block;
+    /* pointer-events: ; */
   }
 }
