@@ -44,9 +44,9 @@ h3 {
   transition: opacity 4s ease-in;
 }
 
-.preload .mobile {
+/* .preload .mobile {
   display: none;
-}
+} */
 
 .loader-circle {
   height: 20px;
@@ -109,16 +109,16 @@ h3 {
   color: #a0c5e8;
 }
 
-.navigationa a img .pc {
+.navigationa img {
   width: 100%;
   max-width: 85px;
   height: auto;
 }
 
-.navigation .mobile {
+/* .navigation .mobile {
   display: none;
   pointer-events: unset;
-}
+} */
 
 /*------------ABOUT + WORK.HTML----------*/
 
@@ -509,7 +509,7 @@ h3 {
   .my-work .row .col .pc {
     width: 80%;
   }
-  .navigation .pc,
+  /* .navigation .pc,
   .preload .pc {
     display: none;
     pointer-events: unset;
@@ -519,5 +519,4 @@ h3 {
   .preload .mobile {
     display: block;
     /* pointer-events: ; */
-  }
 }

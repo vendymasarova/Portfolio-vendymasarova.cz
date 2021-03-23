@@ -178,10 +178,10 @@ body {
   color: #a0c5e8;
 }
 
-.navigation .mobile {
+/* .navigation .mobile {
   display: none;
   pointer-events: unset;
-}
+} */
 
 @keyframes reveal {
   from {
@@ -236,7 +236,7 @@ body {
     padding: 0.5rem 1rem;
   }
 
-  .navigation .pc,
+  /* .navigation .pc,
   .preload .pc {
     display: none;
     pointer-events: unset;
@@ -246,5 +246,5 @@ body {
   .preload .mobile {
     display: block;
     /* pointer-events: ; */
-  }
+  } */
 }
