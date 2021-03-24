@@ -364,9 +364,6 @@ h3 {
   font-size: 20px;
   margin-bottom: 20px;
 }
-.why-text-wrapper ul {
-  list-style-type: square;
-}
 
 .why-text-wrapper p {
   color: white;
@@ -381,7 +378,7 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   background-color: #f5f5f5;
 }
 
@@ -523,10 +520,14 @@ footer span {
     padding: 1.5rem 0;
   }
   .text-wrapper h3,
-  .text-wrapper p,
+  .text-wrapper p {
+    /* padding: 0; */
+    padding: 0 0 0 150px;
+  }
+
   #about-work .text-wrapper h3,
   #about-work .text-wrapper p {
-    padding: 0;
+    padding: 0 150px 0 0;
   }
 
   .title-wrapper {
@@ -582,6 +583,11 @@ footer span {
     flex-wrap: nowrap;
   }
 
+  #about-work .text-wrapper h3,
+  #about-work .text-wrapper p {
+    padding: 0;
+  }
+
   .title-name {
     font-size: 20px;
   }
@@ -601,9 +607,16 @@ footer span {
     margin: 1rem;
     align-items: center;
   }
-  .text-wrapper p {
+  .text-wrapper p,
+  #about-work .text-wrapper p {
     padding: 0 1rem;
     text-align: center;
+  }
+
+  .text-wrapper h3,
+  #about-work .text-wrapper h3 {
+    /* padding: 0; */
+    padding: 0;
   }
 
   .text-wrapper button,
@@ -666,11 +679,11 @@ footer span {
     align-items: center;
   }
   .why-text-wrapper p,
-  .why-text-wrapper ul {
+  .why-text-wrapper ol {
     font-size: 16px;
-    text-align: center;
+    text-align: left;
   }
-  .why-text-wrapper ul {
+  .why-text-wrapper ol {
     padding: 0rem 1rem;
   }
 
@@ -679,7 +692,7 @@ footer span {
     text-align: center;
   }
 
-  .social-icons ul li {
+  .social-icons ol li {
     padding: 6px;
     height: 35px;
     width: 35px;
@@ -699,18 +712,36 @@ footer span {
     font-size: 40px;
   }
 
+  .kontakt-text div {
+    top: 5px;
+  }
+
+  .kontakt-text .square1 {
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px 5px 20px;
+  }
+  .kontakt-text .square2 {
+    width: 20px;
+    height: 20px;
+  }
+  .kontakt-text .square3 {
+    width: 10px;
+    height: 10px;
+  }
+
   footer {
     justify-content: space-between;
     padding: 20px 20px;
   }
 
   footer h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 
   footer .contact p {
-    font-size: 13px;
+    font-size: 9px;
   }
 
   footer .social ul li {
