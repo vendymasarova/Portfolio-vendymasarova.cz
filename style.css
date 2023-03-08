@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PopLight;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: PopRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: PlayFair;
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+body {
+  font-family: PopLight;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 4s ease-in;
+}
+
+.loader-circle {
+  height: 20px;
+  transform-origin: bottom center;
+  animation: rotate 3s linear infinite;
+  position: relative;
+  top: -5%;
+}
+
+.preload .circle {
+  background-color: #a0c5e8;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: grow 1.5s linear infinite;
+
+  margin: -5px;
+  z-index: 888;
+  display: inline-block;
+}
+
+.preload .mobile {
+  display: none;
+  pointer-events: unset;
+}
+
+.circle:nth-child(2) {
+  background-color: #a5a5a5;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+.main {
+  transition: opacity 2s ease-in;
+  opacity: 0;
+  display: none;
+}
+
+.main-active {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 1;
+}
+
+.photo-landing-page {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  animation: reveal 1s ease forwards;
+  display: flex;
+  opacity: 0;
+}
+
+.main video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: reveal 1s ease 1s forwards;
+  opacity: 0;
+}
+
+.main .animate-text h1 {
+  position: relative;
+  font-family: PopRegular;
+  font-weight: bold;
+  text-align: center;
+  font-size: 94px;
+  transform: translateY(-100%);
+  animation: transition 1s ease-in;
+  z-index: 3;
+  display: inline-block;
+  display: none;
+}
+
+.animate-text h1.text-in {
+  animation: textIn 0.5s ease;
+  display: block;
+}
+
+@keyframes textIn {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: PlayFair;
+}
+
+.logo .v {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.logo .next {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: -15px;
+}
+
+.logo span {
+  margin-top: -10px;
+  font-size: 13px;
+  transform: translate(-5px, 3px);
+}
+
+.navigation {
+  position: relative;
+  height: 8vh;
+  width: 80%;
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.pages {
+  list-style: none;
+}
+
+.pages a {
+  color: black;
+}
+
+.pages a:hover {
+  color: #a0c5e8;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .animate-text h1.text-in {
+    font-size: 76px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .animate-text h1.text-in {
+    font-size: 48px;
+  }
+
+  .navigation {
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+}
+@media screen and (max-width: 501px) {
+  /* .main h1 {
+    display: none;
+  } */
+  .animate-text h1.text-in {
+    font-size: 40px;
+    transform: translateY(-420%);
+  }
+
+  @keyframes textIn {
+    from {
+      transform: translateY(-410%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(-420%);
+      opacity: 1;
+    }
+  }
+
+  .pages a {
+    font-size: 15px;
+  }
+
+  .navigation {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+}

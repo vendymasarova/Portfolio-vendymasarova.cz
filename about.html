@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendy Masarová - Tvůrce webových stránek</title>
+    <meta name="description" content="Vytvářím webový design, který následně přepisuji do kódu, čímž vzniká webová stránka.
+    Vytvořím reprezentativní web pro vaše podnikání.">
+    <meta name="keywords" content="web design, tvůrce webu, programování, vendymasarova, HTML, CSS, JAVASCRIPT, web development, freelancer">
+    <meta name="author" content="Vendy Masarová">
+    <link rel="shortcut icon" type="image/ico" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="about.css" /> 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="loader.js"></script>
+    <script defer src="about.js"></script>
+  </head>
+  <body>
+    <div class="preload">
+      <div class="loader-circle">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="logo">
+        <p class="v">
+          V
+        </p>
+        <p class="next endy">endy<span>Masarová<span></p>
+      </div>
+    </div>
+    <div class="main">
+      <nav class="navigation">
+        <p><a href="" class="nav-link">O mně</a></p>
+        <a href="index.html" class="logo-link">
+          <div class="logo">
+            <p class="v">
+              <!-- <img class="pc" src="assets/logo.png" alt="" /> -->
+              V
+            </p>
+            <p class="next endy">endy<span>Masarová<span></p>
+          </div>
+          </a>
+
+        <p><a href="work.html" class="nav-link">Má práce</a></p>
+      </nav>
+      <header id="about" class="section">
+        <div class="about-wrapper">
+          <div class="photo-wrapper">
+            <img src="assets/photo-about-compressed.jpg" alt="vendymasarova - o mne" />
+          </div>
+          <div class="title-wrapper">
+            <p class="title-name">O mně</p>
+            <!-- <p class="title-position">Junior Front-end Developer</p> -->
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <h3>Jmenuji se Vendy.</h3>
+          <p>
+            Jsem začínající webový vývojář 
+            a tvůrčí osobnost. 
+            Baví mě design a komunikace.
+          </p>
+          <button>
+            <a href="work.html" class="text-button nav-link">Má práce</a>
+          </button>
+        </div>
+      </header>
+
+      <section class="social-icons">
+        <ul>
+          <a href="https://www.instagram.com/vendymasarova/" target="_blank"
+            ><li><i class="fa fa-instagram"></i></li
+          ></a>
+          <a href="https://github.com/vendymasarova" target="_blank"
+            ><li><i class="fa fa-github"></i></li
+          ></a>
+          <a href="https://www.facebook.com/vend3/"
+            ><li><i class="fa fa-facebook"></i></li
+          ></a>
+        </ul>
+      </section>
+      <div class="pointer">
+        <a href="#top" class="arrow-pointer nav-link"
+          ><i class="fa fa-long-arrow-up"></i
+        ></a>
+      </div>
+
+      <section class="why section">
+        <div class="why-text-wrapper">
+          <h3>Kdo jsem?</h3>
+          <p>
+            Především jsem každý den studentem. Tvorba webu je pro mě svým způsobem splněný sen.
+            Vždycky mě to táhlo k designu a vždycky jsem věděla, že jednou budu dělat to, co mě bude bavit a zároveň tím budu pomáhat lidem.
+            Webový vývoj jsem se začala učit v říjnu 2020.
+            Svoje znalosti posouvám každý den dál. Jsem hlavně samouk. IT vzdělání u mě nenajdete, ale to mi jistým způsobem dává nadhled.
+            
+          </p>
+          <h5>Jaké jsou mé přednosti?
+          </h5>
+          <ul class="why-ul">
+            <li>Komunikace</li>
+            <li>Empatie</li>
+            <li>Dodržuji termíny</li>
+            <li>Tvorba webu je pro mě koníčkem</li>
+          </ul>
+        </div>
+        <div class="why-photo-wrapper">
+          <img src="assets/sincerely-media-_-hjiem5TqI-unsplash.jpg" alt="" />
+        </div>
+      </section>
+      <section id="kontakt" class="kontakt">
+        <div class="kontakt-text">
+          <h2>Spojme se</h2>
+            <div class="square1"></div>
+            <div class="square2"></div>
+            <div class="square3"></div>
+        </div>
+        <div class="kontakt-form">
+          <form action="POST" data-netlify="true">
+            <div class="inputs">
+              <input type="text" name="name" placeholder="Jméno" required>
+              <input type="text" name="mail" placeholder="Email" required>
+            </div>
+            <textarea name="message" required placeholder="Vaše zpráva"></textarea>
+            <button type="submit" name="submit">
+              Odeslat
+            </button>
+          </form>
+        </div>
+      </section>
+      <footer>
+
+            <div class="contact">
+              <h3>Kontakt</h3>
+              <p>vendymasarova@seznam.cz</p>
+            </div>
+            
+            <p><span>© 2021 Vendula Masarová</span></p>
+      </footer>
+    </div>
+  </body>
+</html>
